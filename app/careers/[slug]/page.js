@@ -102,7 +102,8 @@ export default function JobOpeningPage() {
 
             <div
               className="job-content mt-6 prose prose-lg max-w-none text-[#5E645F] sm:mt-8
-                prose-headings:text-[#414042] prose-headings:tracking-[-0.02em]
+                prose-headings:text-[#414042] 
+                prose-headings:tracking-[-0.02em]
                 prose-p:leading-7 prose-p:text-[#5E645F]
                 prose-li:text-[#5E645F]
                 prose-a:text-[#7FAF2D] prose-a:no-underline hover:prose-a:underline
