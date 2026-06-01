@@ -9,7 +9,7 @@ export default function PortfolioPage() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("https://www.stmconsulting.io/wp-json/wp/v2/avada_portfolio?_embed{page}&per_page=10")
+    fetch("https://cms.stmconsulting.io/wp-json/wp/v2/job-openings?_embed{page}&per_page=10")
       .then((res) => {
         if (!res.ok) throw new Error(`Failed to fetch: ${res.status}`);
         return res.json();

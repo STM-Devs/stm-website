@@ -36,3 +36,28 @@ export async function getPageBySlug(slug) {
   const pages = await res.json();
   return pages[0] || null;
 }
+
+export async function getJobOpenings() {
+  const res = await fetch(`${API_URL}/job-openings?_embed`, {
+    next: { revalidate: 60 },
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch job openings from WordPress");
+  }
+
+  return res.json();
+}
+
+export async function getJobOpeningBySlug(slug) {
+  const res = await fetch(`${API_URL}/job-openings?slug=${slug}&_embed`, {
+    next: { revalidate: 60 },
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch job opening from WordPress");
+  }
+
+  const jobs = await res.json();
+  return jobs[0] || null;
+}
