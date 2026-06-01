@@ -1,10 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import { Button } from "../components/Buttons";
 import { ArrowRight } from "lucide-react";
 
 export default function PortfolioPage() {
+  const router = useRouter();
   const [portfolio, setPortfolio] = useState(null);
   const [error, setError] = useState(null);
 
@@ -37,7 +39,7 @@ export default function PortfolioPage() {
                   className="oppor-container flex min-w-0 flex-1 flex-col items-start justify-between gap-3 sm:gap-4 md:justify-start"
                 >
                   <h2 className="mb-2 w-full break-words font-bold text-base sm:text-lg lg:text-xl [overflow-wrap:anywhere] [word-break:break-word] [hyphens:auto]" dangerouslySetInnerHTML={{ __html: item.title.rendered }} />
-                  <Button variant="primary" onClick={() => window.open(item.link, "_blank")} icon={<ArrowRight size={16} />} className="shrink-0 whitespace-nowrap">
+                  <Button variant="primary" onClick={() => router.push(`/careers/${item.slug}`)} icon={<ArrowRight size={16} />} className="shrink-0 whitespace-nowrap">
                     Learn More
                   </Button>
                 </div>
