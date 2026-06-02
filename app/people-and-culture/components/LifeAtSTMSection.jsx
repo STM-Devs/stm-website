@@ -36,7 +36,7 @@ const LifeAtSTMSection = () => {
   }, {
     src: 'https://cms.stmconsulting.io/wp-content/uploads/2026/06/stm-events-everydaylife.webp'
   }, {
-    src: 'https://cms.stmconsulting.io/wp-content/uploads/2026/06/leadership-program.jpg'
+    src: 'https://cms.stmconsulting.io/wp-content/uploads/2026/06/527785667_1277636803702114_5896004245398846975_n.jpg'
   }];
 
   function Container({ children, className }) {
